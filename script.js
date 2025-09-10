@@ -9,3 +9,11 @@ function onScanFailure(error) {
 let html5QrcodeScanner = new Html5QrcodeScanner(
   "qr-reader", { fps: 10, qrbox: 250 });
 html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+    function loginPayme() {
+      window.location.href = "https://payme.uz/login"; 
+    }
+
+    function loginClick() {
+      window.location.href = "https://my.click.uz/"; 
+    }
+
