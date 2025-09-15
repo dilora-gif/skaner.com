@@ -16,6 +16,19 @@ html5QrcodeScanner.render(onScanSuccess, onScanFailure);
     function loginClick() {
        window.location.href = "https://my.click.uz/#/registration";
     }
+    let ism = prompt("Ismingizni kiriting:");
+    let familiya = prompt("Familiyangizni kiriting:");
+    let yosh = +prompt("Yoshingizni kiriting:");
+
+let login = prompt("Loginni kiriting:");
+let parol = prompt("Parolni kiriting:");
+
+if (login === "admin" && parol === "admin") {
+    console.log("Xush kelibsiz, admin!");
+} else {
+    console.log("Xush kelibsiz, foydalanuvchi!");
+}
+
 
 
 
