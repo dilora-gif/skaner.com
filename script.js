@@ -18,3 +18,5 @@ html5QrcodeScanner.render(onScanSuccess, onScanFailure);
     }
 
 
+
+
