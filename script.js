@@ -41,8 +41,9 @@ function yubor() {
   Shikoyat: ${fullshikoyat}
   `
 
-    fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}` )
+    fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}`)
 }
+
 
 
 
