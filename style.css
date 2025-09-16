@@ -30,3 +30,25 @@ button {
 button:hover {
   background: #0056b3;
 }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.shikoyatforma{
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  padding: 10px;
+}
+.shikoyatforma * {
+  font-size: 25px;
+  margin: 3px 0px;
+}
+
