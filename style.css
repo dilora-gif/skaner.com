@@ -34,12 +34,14 @@ button:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius:8px;
 }
 body{
   display: flex;
   justify-content: center;
   align-items: 100px;
   height: 100vh;
+  margin-top:100px;
 }
 .shikoyatforma{
   display: flex;
@@ -51,5 +53,6 @@ body{
   font-size: 25px;
   margin: 3px 0px;
 }
+
 
 
