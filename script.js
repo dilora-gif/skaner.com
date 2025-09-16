@@ -28,6 +28,22 @@ if (login === "admin " && parol === "admin ") {
 } else {
     console.log("Xush kelibsiz, foydalanuvchi!");
 }
+function yubor() {
+  let fio = document.querySelector(".fio").value;
+  let telraqam = document.querySelector(".telraqam").value;
+  let shikoyatcha = document.querySelector(".shikoyatcha").value;
+  let fullshikoyat = document.querySelector(".fullshikoyat").value;
+
+  let xabar = `
+  Ismi: ${fio}
+  Raqami: ${telraqam}
+  Shikoyat kategoriyasi: ${shikoyatcha}
+  Shikoyat: ${fullshikoyat}
+  `
+
+    fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}` )
+}
+
 
 
 
