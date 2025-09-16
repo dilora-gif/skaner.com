@@ -41,7 +41,7 @@ body{
   justify-content: center;
   align-items: 100px;
   height: 100vh;
-  margin-top:100px;
+  margin-right:45px;
 }
 .shikoyatforma{
   display: flex;
@@ -53,6 +53,7 @@ body{
   font-size: 25px;
   margin: 3px 0px;
 }
+
 
 
 
