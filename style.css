@@ -39,7 +39,7 @@ button:hover {
 body{
   display: flex;
   justify-content: center;
-  align-items: 100px;
+  align-items: 200px;
   height: 100vh;
   margin-right:45px;
 }
@@ -53,6 +53,7 @@ body{
   font-size: 25px;
   margin: 3px 0px;
 }
+
 
 
 
