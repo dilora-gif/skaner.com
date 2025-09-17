@@ -24,9 +24,9 @@ let login = prompt("Loginni kiriting:");
 let parol = prompt("Parolni kiriting:");
 
 if (login === "admin " && parol === "admin ") {
-    console.log("Xush kelibsiz, admin!");
+    alert("Xush kelibsiz, admin!");
 } else {
-    console.log("Xush kelibsiz, foydalanuvchi!");
+    alert("Xush kelibsiz, foydalanuvchi!");
 }
 function yubor() {
   let fio = document.querySelector(".fio").value;
@@ -43,6 +43,7 @@ function yubor() {
 
     fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}`)
 }
+
 
 
 
