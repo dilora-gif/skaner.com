@@ -1,23 +1,38 @@
+
 body {
   font-family: sans-serif;
   background: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-.container {
+
+.main-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
+
+.scanner-container {
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   text-align: center;
+  margin-bottom: 18px;
 }
+
 video {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   border: 2px solid #333;
   border-radius: 8px;
 }
+
 button {
   margin: 5px;
   padding: 10px 20px;
@@ -30,30 +45,59 @@ button {
 button:hover {
   background: #0056b3;
 }
-*{
-  margin: 0;
-  padding: 0;
+
+* {
   box-sizing: border-box;
-  border-radius:8px;
-}
-body{
-  display: flex;
-  justify-content: center;
-  align-items: 200px;
-  height: 100vh;
-  margin-right:70px;
-}
-.shikoyatforma{
-  display: flex;
-  flex-direction: column;
-  background-color: red;
-  padding: 10px;
-}
-.shikoyatforma * {
-  font-size: 25px;
-  margin: 3px 0px;
 }
 
+.shikoyatforma {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff3f3;
+  padding: 16px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255,0,0,0.08);
+  margin-bottom: 10px;
+}
+.shikoyatforma h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #c00;
+}
+.shikoyatforma input,
+.shikoyatforma select,
+.shikoyatforma textarea {
+  font-size: 1em;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.shikoyatforma textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.shikoyatforma button {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+@media (max-width: 500px) {
+  .main-wrapper {
+    max-width: 100vw;
+    padding: 0 2vw;
+  }
+  .scanner-container, .shikoyatforma {
+    padding: 10px 4px;
+    border-radius: 8px;
+  }
+  .shikoyatforma input,
+  .shikoyatforma select,
+  .shikoyatforma textarea {
+    font-size: 1em;
+    padding: 6px;
+  }
+}
 
 
 
