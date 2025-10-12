@@ -6,27 +6,28 @@ function onScanFailure(error) {
   console.warn(`Xato: ${error}`);
 }
 
-let html5QrcodeScanner = new Html5QrcodeScanner(
-  "qr-reader", { fps: 10, qrbox: 250 });
-html5QrcodeScanner.render(onScanSuccess, onScanFailure);
-    function loginPayme() {
-       window.location.href = "https://payme.uz/home/register"
+window.addEventListener('DOMContentLoaded', function() {
+  let device = prompt("Siz qaysi qurilmadan foydalanyapsiz? (telefon/kompyuter)");
+  if (device) {
+    device = device.trim().toLowerCase();
+    if (device.startsWith('t')) {
+      document.body.classList.add('telefon');
+    } else if (device.startsWith('k') || device.startsWith('c')) {
+      document.body.classList.add('kompyuter');
     }
+  }
 
-    function loginClick() {
-       window.location.href = "https://my.click.uz/#/registration";
-    }
-    let ism = prompt("Ismingizni kiriting:");
-    let familiya = prompt("Familiyangizni kiriting:");
-    let yosh = +prompt("Yoshingizni kiriting:");
+  let html5QrcodeScanner = new Html5QrcodeScanner(
+    "qr-reader", { fps: 10, qrbox: 250 });
+  html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+});
 
-let login = prompt("Loginni kiriting:");
-let parol = prompt("Parolni kiriting:");
+function loginPayme() {
+  window.location.href = "https://payme.uz/home/register"
+}
 
-if (login === "admin " && parol === "admin ") {
-    alert("Xush kelibsiz, admin!");
-} else {
-    alert("Xush kelibsiz, foydalanuvchi!");
+function loginClick() {
+  window.location.href = "https://my.click.uz/#/registration";
 }
 function yubor() {
   let fio = document.querySelector(".fio").value;
@@ -43,7 +44,6 @@ function yubor() {
 
     fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}`)
 }
-
 
 
 
