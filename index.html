@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>menig birinchi skaner programmam</title>
-  <link rel="stylesheet" href="style.css">
-   <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="scanner-container">
-    <h2>QR Kodni Skaner Qiling</h2>
-    <div id="qr-reader" style="width: 100%; max-width: 300px;"></div>
-    <p id="result">Natija: </p>
-    <p id="scan-count">Skanlar soni: 0 / 5</p>
-
-    <div id="upgrade" class="upgrade-box">
-      <p>Limit tugadi. Cheksiz skan qilish uchun akkauntingizga kiring:</p>
-     <button class="btn" onclick="loginPayme()">Payme orqali kirish</button>
-  <button class="btn" onclick="loginClick()">Click orqali kirish</button>
+  <div class="main-wrapper">
+    <div class="scanner-container">
+      <h2>QR Kodni Skaner Qiling</h2>
+      <div id="qr-reader" style="width: 100%; max-width: 300px;"></div>
+      <p id="result">Natija: </p>
+      <p id="scan-count">Skanlar soni: 0 / 5</p>
+      <div id="upgrade" class="upgrade-box">
+        <p>Limit tugadi. Cheksiz skan qilish uchun akkauntingizga kiring:</p>
+        <button class="btn" onclick="loginPayme()">Payme orqali kirish</button>
+        <button class="btn" onclick="loginClick()">Click orqali kirish</button>
+      </div>
+    </div>
+    <div class="shikoyatforma"> 
+      <h2>Shikoyat arizasi</h2>
+      <input type="text" placeholder="FIO" class="fio">
+      <input type="text" placeholder="Muamoni yozing:" class="muamoni yozib qoldiring">
+      <input type="tel" placeholder="Telefon raqami" class="telraqam">
+      <select name="" class="shikoyatcha">
+          <option value="skaner ishmayapdi">skaner ishlamaydi</option>
+          <option value="skaner ko'rsatmayapdi">skaner ko'rsatmayapdi</option>
+          <option value="skaner qotyapdi">skaner qotyapdi</option>
+      </select>
+      <textarea name="" class="fullshikoyat" placeholder="Batafsil shikoyat..."></textarea>
+      <button onclick="yubor()">Yuborish</button>
     </div>
   </div>
-       <div class="shikoyatforma"> 
-    <input type="text" placeholder="FIO" class="fio">
-    <input type="text" placeholder="Muamoni yozing:" class="muamoni yozib qoldiring">
-    <input type="tel" placeholder="Telefon raqami" class="telraqam">
-
-    <br>
-    <select name="" class="shikoyatcha">
-        <option value="skaner ishmayapdi">skaner ishlamaydi</option>
-        <option value="skaner ko'rsatmayapdi">skaner ko'rsatmayapdi</option>
-        <option value="skaner qotyapdi">skaner qotyapdi</option>
-    </select>
-
-    <textarea name="" class="fullshikoyat"></textarea>
-
-  <button onclick="yubor()">Yuborish</button>
-</div>
-
-   <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
-
-
