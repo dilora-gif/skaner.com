@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QR Skaner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="main-wrapper">
     <div class="scanner-container">
-      <h2>QR Kodni Skaner Qiling</h2>
+      <h2>QR Kodni Skanerlang</h2>
       <div id="qr-reader" style="width: 100%; max-width: 300px;"></div>
       <p id="result">Natija: </p>
-      <p id="scan-count">Skanlar soni: 0 / 5</p>
-      <div id="upgrade" class="upgrade-box">
-        <p>Limit tugadi. Cheksiz skan qilish uchun akkauntingizga kiring:</p>
+      <p id="scan-count">Skanerlar soni: 0 / 5</p>
+      <div id="upgrade" class="upgrade-box" style="display: none;">
+        <p>Limit tugadi. Cheksiz skaner qilish uchun akkauntingizga kiring:</p>
         <button class="btn" onclick="loginPayme()">Payme orqali kirish</button>
         <button class="btn" onclick="loginClick()">Click orqali kirish</button>
       </div>
