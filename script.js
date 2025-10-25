@@ -1,51 +1,152 @@
-function onScanSuccess(decodedText, decodedResult) {
-  document.getElementById('result').textContent = 'Natija: ' + decodedText;
+body.telefon .main-wrapper {
+  max-width: 100vw;
+  padding: 0 2vw;
+}
+body.telefon .scanner-container,
+body.telefon .shikoyatforma {
+  padding: 10px 4px;
+  border-radius: 8px;
+  font-size: 0.98em;
+}
+body.telefon .scanner-container h2,
+body.telefon .shikoyatforma h2 {
+  font-size: 1.1em;
+}
+body.telefon .shikoyatforma input,
+body.telefon .shikoyatforma select,
+body.telefon .shikoyatforma textarea {
+  font-size: 1em;
+  padding: 6px;
+}
+body.telefon .shikoyatforma textarea {
+  min-height: 50px;
 }
 
-function onScanFailure(error) {
-  console.warn(`Xato: ${error}`);
+body.kompyuter .main-wrapper {
+  max-width: 700px;
+  padding: 32px 0 48px 0;
+}
+body.kompyuter .scanner-container,
+body.kompyuter .shikoyatforma {
+  padding: 32px 28px;
+  border-radius: 18px;
+  font-size: 1.15em;
+}
+body.kompyuter .scanner-container h2,
+body.kompyuter .shikoyatforma h2 {
+  font-size: 1.5em;
+}
+body.kompyuter .shikoyatforma input,
+body.kompyuter .shikoyatforma select,
+body.kompyuter .shikoyatforma textarea {
+  font-size: 1.15em;
+  padding: 14px;
+}
+body.kompyuter .shikoyatforma textarea {
+  min-height: 100px;
+}
+body {
+  font-family: sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
 }
 
-window.addEventListener('DOMContentLoaded', function() {
-  let device = prompt("Siz qaysi qurilmadan foydalanyapsiz? (telefon/kompyuter)");
-  if (device) {
-    device = device.trim().toLowerCase();
-    if (device.startsWith('t')) {
-      document.body.classList.add('telefon');
-    } else if (device.startsWith('k') || device.startsWith('c')) {
-      document.body.classList.add('kompyuter');
-    }
+.main-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  gap: 24px;
+}
+
+.scanner-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+video {
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shikoyatforma {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff3f3;
+  padding: 16px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255,0,0,0.08);
+  margin-bottom: 10px;
+}
+.shikoyatforma h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #c00;
+}
+.shikoyatforma input,
+.shikoyatforma select,
+.shikoyatforma textarea {
+  font-size: 1em;
+  margin: 5px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.shikoyatforma textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+.shikoyatforma button {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+@media (max-width: 500px) {
+  .main-wrapper {
+    max-width: 100vw;
+    padding: 0 2vw;
   }
-
-  let html5QrcodeScanner = new Html5QrcodeScanner(
-    "qr-reader", { fps: 10, qrbox: 250 });
-  html5QrcodeScanner.render(onScanSuccess, onScanFailure);
-});
-
-function loginPayme() {
-  window.location.href = "https://payme.uz/home/register"
+  .scanner-container, .shikoyatforma {
+    padding: 10px 4px;
+    border-radius: 8px;
+  }
+  .shikoyatforma input,
+  .shikoyatforma select,
+  .shikoyatforma textarea {
+    font-size: 1em;
+    padding: 6px;
+  }
 }
-
-function loginClick() {
-  window.location.href = "https://my.click.uz/#/registration";
-}
-function yubor() {
-  let fio = document.querySelector(".fio").value;
-  let telraqam = document.querySelector(".telraqam").value;
-  let shikoyatcha = document.querySelector(".shikoyatcha").value;
-  let fullshikoyat = document.querySelector(".fullshikoyat").value;
-
-  let xabar = `
-  Ismi: ${fio}
-  Raqami: ${telraqam}
-  Shikoyat kategoriyasi: ${shikoyatcha}
-  Shikoyat: ${fullshikoyat}
-  `
-
-    fetch(`https://api.telegram.org/bot8491755678:AAGreg4WsxluGWEfxdzeZK3Ch4ASsdnmw2M/sendMessage?chat_id=6857296724&text=${xabar}`)
-}
-
-
 
 
 
